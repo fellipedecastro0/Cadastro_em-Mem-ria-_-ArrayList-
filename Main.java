@@ -141,7 +141,7 @@ public class Main {
         if (!matricula.isEmpty()) existente.setMatricula(matricula);
 
         funcionarioRepo.atualizar(id, existente);
-        System.out.println("✅ Funcionário atualizado com sucesso!");
+        System.out.println("Funcionário atualizado com sucesso!");
     }
 
     private static void removerFuncionario() {
