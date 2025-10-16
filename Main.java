@@ -9,7 +9,7 @@ public class Main {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    // Repositórios (ajuste os nomes se seu grupo usou outros)
+    // Repositórios
     private static final FuncionarioRepository funcionarioRepo = new FuncionarioRepository();
     private static final ProdutoRepository produtoRepo = new ProdutoRepository();
     private static final ClienteRepository clienteRepo = new ClienteRepository();
@@ -99,7 +99,7 @@ public class Main {
         f.setMatricula(matricula);
 
         funcionarioRepo.adicionar(f);
-        System.out.println("✅ Funcionário cadastrado com sucesso!");
+        System.out.println(" Funcionário cadastrado com sucesso!");
     }
 
     private static void listarFuncionarios() {
@@ -141,13 +141,13 @@ public class Main {
         if (!matricula.isEmpty()) existente.setMatricula(matricula);
 
         funcionarioRepo.atualizar(id, existente);
-        System.out.println("✅ Funcionário atualizado com sucesso!");
+        System.out.println(" Funcionário atualizado com sucesso!");
     }
 
     private static void removerFuncionario() {
         int id = lerInt("Digite o ID para remover: ");
         boolean ok = funcionarioRepo.removerPorId(id);
-        System.out.println(ok ? "✅ Funcionário removido." : "ID não encontrado.");
+        System.out.println(ok ? " Funcionário removido." : "ID não encontrado.");
     }
 
     // ================= PRODUTOS =================
@@ -203,7 +203,7 @@ public class Main {
         p.setQuantidadeEmEstoque(quantidade);
 
         produtoRepo.adicionar(p);
-        System.out.println("✅ Produto cadastrado com sucesso!");
+        System.out.println(" Produto cadastrado com sucesso!");
     }
 
     private static void listarProdutos() {
@@ -245,7 +245,7 @@ public class Main {
         if (!qtdStr.isEmpty()) existente.setQuantidadeEmEstoque(Integer.parseInt(qtdStr));
 
         produtoRepo.atualizar(id, existente);
-        System.out.println("✅ Produto atualizado com sucesso!");
+        System.out.println(" Produto atualizado com sucesso!");
     }
 
     private static void removerProduto() {
@@ -349,13 +349,13 @@ public class Main {
         if (!email.isEmpty()) existente.setEmail(email);
 
         clienteRepo.atualizar(id, existente);
-        System.out.println("✅ Cliente atualizado com sucesso!");
+        System.out.println(" Cliente atualizado com sucesso!");
     }
 
     private static void removerCliente() {
         int id = lerInt("Digite o ID para remover: ");
         boolean ok = clienteRepo.removerPorId(id);
-        System.out.println(ok ? "✅ Cliente removido." : "ID não encontrado.");
+        System.out.println(ok ? "Cliente removido." : "ID não encontrado.");
     }
 
     // ================= UTILITÁRIOS =================
